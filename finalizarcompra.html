@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hola Mundo Store, el paraíso del merchandising para programadores: cuadros, stickers, mousepads y remeras que expresan tu pasión por el código.">
+    <title>Hola Mundo Store - Todo para developers</title>
+    <link rel="icon" href="/img/favicon.svg" type="image/svg+xml"> <!-- Formato SVG -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=New+Amsterdam&display=swap" as="font" crossorigin="crossorigin">
+    <link rel="preload" href="/css/normalize.css" as="style">
+    <link rel="preload" href="/css/styles.css" as="style">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=New+Amsterdam&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/styles.css">
+
+    <link rel="prefetch" href="gracias.html" as="document">
+</head>
+
+<body>
+    <header></header>
+
+    <main class="contenedor contenido">
+        <div class="mensaje_fc">
+            <h1 class="titulo_fc bold">Finalizar compra</h1>
+            <img loading="lazy" src="/img/mercadopago.svg" alt="logo mercadopago" class="logo_fc">
+        </div>
+        <p class="datos_fc">Hola, te enviaré por WhatsApp mis datos para realizar el
+            pago (titular de la cuenta y alias), completa el formulario a continuación para realizar tu pedido. ¿No
+            tienes WhatsApp? No hay problema,
+            escribeme por Instagram <a href="https://www.instagram.com/holamundotech/" target="_blank"
+                class="link">Click Aquí</a></p>
+    </main>
+
+    <!--Banner friends-->
+    <div class="contenedor banner contenido-banner" id="carteles">
+        <div class="banner__imagen">
+            <img loading="lazy" src="/img/banner-friends.png" alt="banner cuadro personalizado" class="banner__imagen-border block">
+        </div>
+        <div class="banner__info">
+            <div class="banner__info__icono">
+                <img loading="lazy" src="/img/icono-friends.svg" alt="ícono personalizado">
+            </div>
+            <div class="banner__info__copy">
+                <h4 class="no-space b1">Mis compas devs</h4>
+                <h2 class="no-space b2">Ya elegieron <br>
+                    mejorar sus setups</h2>
+            </div>
+        </div>
+    </div>
+
+    <section class="contenedor formulario">
+        <form id="contactForm" onsubmit="return sendMessage()">
+
+            <!-- Selección de Productos y Cantidad -->
+            <section class="section">
+                <h3 class="titulo_fc">Productos</h3>
+
+                <div class="form-flex">
+                    <div class="campo_selector">
+
+                        <select id="product" name="product" required class="selector">
+                            <option value="" disabled selected>Selecciona un producto</option>
+                            <option value="" disabled>// cuadros //</option>
+                            <option value="Cuadro Hello World - Drácula theme">Cuadro Hello World - Drácula theme
+                            </option>
+                            <option value="Cuadro Hello World - Gruvbox theme">Cuadro Hello World - Gruvbox theme
+                            </option>
+                            <option value="Cuadro Hello World - Monokai Pro theme">Cuadro Hello World - Monokai Pro
+                                theme</option>
+                            <option value="Cuadro Hello World - edición especial theme">cuadro Hello World - Edición
+                                especial theme</option>
+                            <option value="cuadro Hello World - Personalizado">cuadro Hello World - Personalizado
+                            </option>
+                            <option value="" disabled>// Desk Pads //</option>
+                            <option value="Desk pad Hello World - Drácula theme">Desk pad Hello World - Drácula theme
+                            </option>
+                            <option value="Desk pad Hello World - Gruvbox theme">Desk pad Hello World - Gruvbox theme
+                            </option>
+                            <option value="Desk pad Hello World - Monokai Pro theme">Desk pad Hello World - Monokai Pro
+                                theme</option>
+                            <option value="Desk pad Hello World - Custom theme">Desk pad Hello World - Personalizado
+                            </option>
+                            <option value="" disabled>// Remeras //</option>
+                            <option value="Remera This is fine!">Remera This is fine!</option>
+                            <option value="Remera Anti Coding Coding Club">Remera Anti Coding Coding Club</option>
+                            <option value="Remera Baby dont hurt me">Remera Baby dont hurt me</option>
+                            <option value="Remera Sabes de código bro?">Remera Sabes de código bro?</option>
+                            <option value="Remera Cazador de bugs">Remera Cazador de bugs</option>
+                            <option value="Remera Todo bajo control">Remera Todo bajo control</option>
+                            <option value="Remera CSS es increíble">Remera CSS es increíble</option>
+                            <option value="Remera !false">Remera false</option>
+                            <option value="Remera Funcionaba en mi máquina">Remera Funcionaba en mi máquina</option>
+                            <option value="Remera Github (mona - the octocat)">Remera Github (mona - the octocat)
+                            </option>
+                            <option value="Remera Lo hago en producción">Remera Lo hago en producción</option>
+                            <option value="Remera El código nunca miente">Remera El código nunca miente</option>
+                            <option value="" disabled>// Otros //</option>
+                            <option value="Stickers de programación">Stickers de programación</option>
+                            <option value="Cartel neon RGB Github" disabled>Cartel neon RGB Github</option>
+
+                        </select>
+                    </div>
+
+                    <div class="campo_cantidad">
+                        <input type="number" id="amount" name="amount" min="1" max="3" required class="cantidad_fc"
+                            placeholder="Cantidad">
+                    </div>
+                </div>
+
+                <div class="form-grid">
+
+                    <!-- Campo dinámico para seleccionar el corte de la remera -->
+                    <div id="corteRemera" class="campo_form_grid" style="display: none;">
+                        <select id="type" name="type" class="selector">
+                            <option value="" disabled selected>Selecciona el estilo</option>
+                            <option value="Corte femenino">Corte femenino</option>
+                            <option value="Corte masculino">Corte masculino</option>
+                        </select>
+                    </div>
+
+
+                    <!-- Campo dinámico para seleccionar el tamaño de la remera -->
+                    <div id="tallaRemera" class="campo_form_grid" style="display: none;">
+                        <select id="size" name="size" class="selector">
+                            <option value="" disabled selected>Talle</option>
+                            <option value="S">S</option>
+                            <option value="M">M</option>
+                            <option value="L">L</option>
+                            <option value="XL">XL</option>
+                            <option value="XXL">XXL</option>
+                        </select>
+                    </div>
+                </div>
+
+
+                <div class="campo_stickers">
+                    <p>¿Te gustaría agregar un pack de stickers de programación por <span class="precio"
+                            data-producto="stickersPromo">$0</span> en promoción con ésta
+                        compra?"
+                        <a href="/tienda/otros/stickers.html" target="_blank">Miralos aquí</a>
+                    </p>
+                </div>
+                <!--
+                <input type="checkbox" id="stickers" name="stickers">
+                <label for="checkbox">Sí, agregarlos a mi pedido</label>
+            -->
+                <input type="checkbox" id="stickers" name="stickers">
+                <label for="stickers">Sí, incluir stickers en la compra</label>
+
+
+            </section>
+            <!-- Información Personal -->
+            <section class="section">
+                <h3 class="titulo_fc">Información Personal</h3>
+
+                <input type="text" id="fullName" name="fullName" required placeholder="Nombre completo">
+
+                <input type="email" id="email" name="email" required placeholder="Email">
+
+            </section>
+
+            <!-- Dirección de Envío -->
+            <section class="section">
+                <h3 class="titulo_fc">Dirección de Envío</h3>
+
+                <p>Marca la siguiente opción si prefieres que lo enviemos a una sucursal de Correo Argentino más
+                    cercana.</p>
+
+                <label>
+                    <input type="checkbox" id="sucursal" name="sucursal">Sí, enviar a sucursal para retirar.
+                </label>
+
+                <div id="campos-adicionales">
+                    <p>Completa los siguientes datos si prefieres envío a tu domicilio.</p>
+
+                    <input type="text" id="address" name="address" placeholder="Calle y Número">
+
+                    <input type="text" id="city" name="city" placeholder="Ciudad">
+
+                    <div class="form-grid">
+                        <div class="campo_selector">
+                            <select name="province" id="province" class="provincia">
+                                <option value="" disabled selected>Seleccione una provincia</option>
+                                <option value="Buenos Aires">Buenos Aires</option>
+                                <option value="Catamarca">Catamarca</option>
+                                <option value="Chaco">Chaco</option>
+                                <option value="Chubut">Chubut</option>
+                                <option value="Córdoba">Córdoba</option>
+                                <option value="Corrientes">Corrientes</option>
+                                <option value="Entre Ríos">Entre Ríos</option>
+                                <option value="Formosa">Formosa</option>
+                                <option value="Jujuy">Jujuy</option>
+                                <option value="La Pampa">La Pampa</option>
+                                <option value="La Rioja">La Rioja</option>
+                                <option value="Mendoza">Mendoza</option>
+                                <option value="Misiones">Misiones</option>
+                                <option value="Neuquén">Neuquén</option>
+                                <option value="Río Negro">Río Negro</option>
+                                <option value="Salta">Salta</option>
+                                <option value="San Juan">San Juan</option>
+                                <option value="San Luis">San Luis</option>
+                                <option value="Santa Cruz">Santa Cruz</option>
+                                <option value="Santa Fe">Santa Fe</option>
+                                <option value="Santiago del Estero">Santiago del Estero</option>
+                                <option value="Tierra del Fuego">Tierra del Fuego</option>
+                                <option value="Tucumán">Tucumán</option>
+                            </select>
+                        </div>
+
+                        <div class="campo_cantidad">
+                            <input type="text" id="postalCode" name="postalCode" placeholder="Código postal">
+                        </div>
+                    </div>
+
+                    <p>¿Vives en un departamento o un barrio cerrado/privado? Escribe aquí debajo qué número es tu
+                        piso/departamento o lote.</p>
+                    <textarea name="detalles" id="detalles" class="detalles"></textarea>
+                </div>
+
+
+            </section>
+
+            <!-- Botón de Finalizar Compra -->
+            <button type="submit" class="enviar_fc"><i class="fab fa-whatsapp"></i> Realizar pedido</button>
+        </form>
+    </section>
+
+
+    <footer></footer>
+
+    <div class="whatsapp">
+        <a href="https://wa.me/+5493515957014?text=Hola, quería consultar por ">
+            <img loading="lazy" src="/img/whatsapp.png" alt="whatsapp Hola Mundo Store">
+        </a>
+    </div>
+
+    <script>
+
+        function sendMessage() {
+            // Obtén los valores de los campos del formulario
+            var product = encodeURIComponent(document.getElementById('product').value);
+            var amount = encodeURIComponent(document.getElementById('amount').value);
+            var type = encodeURIComponent(document.getElementById('type').value);
+            var size = encodeURIComponent(document.getElementById('size').value);
+            var fullName = encodeURIComponent(document.getElementById('fullName').value);
+            var email = encodeURIComponent(document.getElementById('email').value);
+            var stickersChecked = document.getElementById('stickers').checked; // Verifica si el checkbox está marcado
+            var sucursalChecked = document.getElementById('sucursal').checked; // Verifica si el checkbox de sucursal está marcado
+            var address = encodeURIComponent(document.getElementById('address').value);
+            var city = encodeURIComponent(document.getElementById('city').value);
+            var province = encodeURIComponent(document.getElementById('province').value);
+            var postalCode = encodeURIComponent(document.getElementById('postalCode').value);
+            var detalles = encodeURIComponent(document.getElementById('detalles').value);
+
+            // Número de teléfono fijo
+            var whatsappNumber = '5493515957014';
+
+            // Variable para el mensaje de stickers
+            var stickersMessage = stickersChecked ? "Y sí, me gustaría incluir un pack de stickers." : ""; // Solo se incluye si está marcado
+
+            // Mensajes diferentes para cada caso
+            var message = "";
+
+            if (sucursalChecked) {
+                // Mensaje si el checkbox de sucursal está marcado (envío a sucursal)
+                message = `Hola, quisiera comprar ${amount} ${product} ${type} ${size}%0AMis datos son:%0A${fullName}%0A${email}%0AQuiero que lo envíen a una sucursal de Correo Argentino más cercana.%0A${stickersMessage}`;
+            } else {
+                // Mensaje si el checkbox de sucursal NO está marcado (envío a domicilio)
+                message = `Hola, quisiera comprar ${amount} ${product} ${type} ${size}%0AMis datos son:%0A${fullName}%0A${email}%0A${address}%0A${city}%0A${province}%0A${postalCode}%0A${detalles}%0A${stickersMessage}`;
+            }
+
+            // Construye la URL de WhatsApp
+            var whatsappURL = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${message}`;
+            window.open(whatsappURL, '_blank');
+
+            // Redirige a la página de agradecimiento después de 1.5 segundos
+            setTimeout(function () {
+                window.location.href = 'gracias.html';
+            }, 1500);
+
+            // Previene el envío del formulario
+            return false;
+        }
+
+        // Script para mostrar u ocultar los campos de envío
+
+        const checkbox = document.getElementById('sucursal');
+        const camposAdicionales = document.getElementById('campos-adicionales');
+
+        checkbox.addEventListener('change', function () {
+            if (checkbox.checked) {
+                camposAdicionales.style.display = 'none';
+            } else {
+                camposAdicionales.style.display = 'block';
+            }
+        });
+
+        // Script para mostrar campos de remeras 
+        document.getElementById('product').addEventListener('change', function () {
+    const selectedProduct = this.value;
+    const tallaRemera = document.getElementById('tallaRemera');
+    const corteRemera = document.getElementById('corteRemera');
+
+    // Mostrar u ocultar los selectores según el producto seleccionado
+    if (selectedProduct.startsWith('Remera')) {
+        tallaRemera.style.display = 'block';
+        corteRemera.style.display = 'block';
+    } else {
+        tallaRemera.style.display = 'none';
+        corteRemera.style.display = 'none';
+    }
+});
+
+    </script>
+
+<script src="/templates/headeryfooter.js"></script>
+
+<script src="/js/scripts.js"></script>
+<script src="/js/modernizr.js"></script>
+
+</body>
+
+</html>
