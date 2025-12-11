@@ -35,135 +35,26 @@
             <section class="galeria-desk">
                 <div class="product-gallery separador">
                     <div class="thumbnail-images">
-                        <img loading="lazy" src="/img/remera-thisisfine.jpg" alt="Miniatura 1"
-                            onclick="changeImage('mainImage1', this)">
-                        <img loading="lazy" src="/img/thisisfine-fem.jpg" alt="Miniatura 2" onclick="changeImage('mainImage1', this)">
-                        <img loading="lazy" src="/img/thisisfine-mas.jpg" alt="Miniatura 3" onclick="changeImage('mainImage1', this)">
+                        <img loading="lazy" src="/img/mockup-this-is-fine.png" alt="Miniatura 1" onclick="changeImage('mainImage1', this)">
+                        <img loading="lazy" src="/img/mockup2-thisisfine.jpg" alt="Miniatura 2" onclick="changeImage('mainImage1', this)">
+                        <img loading="lazy" src="/img/image-thisisfine.jpg" alt="Miniatura 3" onclick="changeImage('mainImage1', this)">
                         <img loading="lazy" src="/img/talles-y-medidas.png" alt="Miniatura 4" onclick="changeImage('mainImage1', this)">
                     </div>
                     <div class="main-image">
-                        <img loading="lazy" id="mainImage1" src="/img/remera-thisisfine.jpg" alt="Producto Principal">
+                        <img loading="lazy" id="mainImage1" src="/img/mockup-this-is-fine.png" alt="Producto Principal">
                     </div>
                 </div>
             </section>
 
-            <section class="relacionados separador">
-                <h3 class="titulos">Productos relacionados</h3>
-                <div class="relacionados_bloques">
+            
+            <!-- Productos relacionados remeras -->
+            <div id="relRemeras2"></div>
+            <!-- fin Productos relacionados remeras -->
 
-                    <div class="relacionados_bloque card">
-                        <a href="/tienda/remeras/anticodingclub.html">
-                            <img loading="lazy" src="/img/anti-coding.jpg" alt="remera - anti coding coding club"
-                                class="bloque__imagen ">
-                            <div class="bloque__info">
-                                <h3 class="bloque__nombre no-space">Anti coding coding club</h3>
-                                <p class="bloque__precio no-space precio" data-producto="remeras">$0</p>
-                                <div class="bloque__detalle">
-                                    <p class="detalle">Todos los talles disponibles*</p>
-                                    <p class="bloque__envio no-space">
-                                        <svg xmlns="http://www.w3.org/2000/svg"
-                                            class="icon icon-tabler icon-tabler-bolt" width="20" height="20"
-                                            viewBox="0 0 24 24" stroke-width="1.5" stroke="#00a650" fill="none"
-                                            stroke-linecap="round" stroke-linejoin="round">
-                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                            <path d="M13 3l0 7l6 0l-8 11l0 -7l-6 0l8 -11" />
-                                        </svg>
-                                        <b>Envío gratis</b>
-                                    </p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
+            <!-- Información remeras-->
+            <div id="infoRemeras"></div>
+            <!-- fin info remeras -->
 
-                    <div class="relacionados_bloque card">
-                        <a href="/tienda/remeras/babydonthurtme.html">
-                            <img loading="lazy" src="/img/baby-dont-hurt-me.jpg" alt="remera baby dont hurt me"
-                                class="bloque__imagen ">
-                            <div class="bloque__info">
-                                <h3 class="bloque__nombre no-space">Baby dont hurt me</h3>
-                                <p class="bloque__precio no-space precio" data-producto="remeras">$0</p>
-                                <div class="bloque__detalle">
-                                    <p class="detalle">Todos los talles disponibles*</p>
-                                    <p class="bloque__envio no-space">
-                                        <svg xmlns="http://www.w3.org/2000/svg"
-                                            class="icon icon-tabler icon-tabler-bolt" width="20" height="20"
-                                            viewBox="0 0 24 24" stroke-width="1.5" stroke="#00a650" fill="none"
-                                            stroke-linecap="round" stroke-linejoin="round">
-                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                            <path d="M13 3l0 7l6 0l-8 11l0 -7l-6 0l8 -11" />
-                                        </svg>
-                                        <b>Envío gratis</b>
-                                    </p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="relacionados_bloque card no-movil">
-                        <a href="/tienda/remeras/github.html">
-                            <img loading="lazy" src="/img/github.jpg" alt="remera github"
-                                class="bloque__imagen ">
-                            <div class="bloque__info">
-                                <h3 class="bloque__nombre no-space">Github - mona</h3>
-                                <p class="bloque__precio no-space precio" data-producto="remeras">$0</p>
-                                <div class="bloque__detalle">
-                                    <p class="detalle">Todos los talles disponibles*</p>
-                                    <p class="bloque__envio no-space">
-                                        <svg xmlns="http://www.w3.org/2000/svg"
-                                            class="icon icon-tabler icon-tabler-bolt" width="20" height="20"
-                                            viewBox="0 0 24 24" stroke-width="1.5" stroke="#00a650" fill="none"
-                                            stroke-linecap="round" stroke-linejoin="round">
-                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                            <path d="M13 3l0 7l6 0l-8 11l0 -7l-6 0l8 -11" />
-                                        </svg>
-                                        <b>Envío gratis</b>
-                                    </p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-
-
-
-                </div>
-            </section>
-
-            <section class="caracteristicas separador">
-                <h3 class="titulos">Características</h3>
-                <ul class="caracteristicas__lista no-space">
-                    <li class="caracteristica1 top"><span class="caracteristica-span">Materiales: </span>Poliester
-                    </li>
-                    <li class="caracteristica2"><span class="caracteristica-span">Tipo de tela: </span>Spum
-                    </li>
-                    <li class="caracteristica1"><span class="caracteristica-span">Tipo de manga: </span>Corta
-                    </li>
-                    <li class="caracteristica2"><span class="caracteristica-span">Cuello: </span>Redondo
-                    </li>
-                    <li class="caracteristica1"><span class="caracteristica-span">Medidas: </span>S, M, L, XL, XXL</li>
-                    <li class="caracteristica2 bottom"><span class="caracteristica-span">Impresión: </span>Sublimadas</li>
-                </ul>
-            </section>
-
-            <section class="descripcion">
-                <h3 class="titulos">Descripción</h3>
-                <p class="descripcion__copy">
-                    Lleva tu código siempre contigo con nuestras remeras de programación, creadas para quienes respiran
-                    tecnología. Olvida las típicas camisetas aburridas; estas vienen cargadas de referencias que solo
-                    los que viven en modo dark theme entenderán.
-                </p>
-                <p class="descripcion__copy">
-                    Desde líneas de código minimalistas hasta guiños a lenguajes legendarios, nuestras remeras combinan
-                    estilo y actitud para esos devs que no se conforman con lo básico. Ideales para lucir en meetups,
-                    entre monitores o cuando estás en modo deep work con un café infinito al lado. Con diseños tan
-                    limpios como tu repositorio favorito, cada prenda es más que un simple outfit; es una declaración de
-                    principios: "Compilo, luego existo".
-                </p>
-                <p class="descripcion__copy">
-                    Ultra cómodas para que tu única preocupación sea escribir buen código. Tu
-                    estilo geek merece ser tan sharp como tu lógica. Viste con personalidad y deja que tu pasión por la
-                    programación hable por sí sola.
-                </p>
-            </section>
         </article>
 
 
@@ -175,13 +66,13 @@
                 <div class="product-gallery-movil separador">
 
                     <div class="main-image">
-                        <img loading="lazy" id="mainImage2" src="/img/remera-thisisfine.jpg" alt="Producto Principal">
+                        <img loading="lazy" id="mainImage2" src="/img/mockup-this-is-fine.png" alt="Producto Principal">
                     </div>
 
                     <div class="thumbnail-images-movil">
-                        <img loading="lazy" src="/img/remera-thisisfine.jpg" alt="Miniatura 1" onclick="changeImage('mainImage2', this)">
-                        <img loading="lazy" src="/img/thisisfine-fem.jpg" alt="Miniatura 2" onclick="changeImage('mainImage2', this)">
-                        <img loading="lazy" src="/img/thisisfine-mas.jpg" alt="Miniatura 3" onclick="changeImage('mainImage2', this)">
+                        <img loading="lazy" src="/img/mockup-this-is-fine.png" alt="Miniatura 1" onclick="changeImage('mainImage2', this)">
+                        <img loading="lazy" src="/img/mockup2-thisisfine.jpg" alt="Miniatura 2" onclick="changeImage('mainImage2', this)">
+                        <img loading="lazy" src="/img/image-thisisfine.jpg" alt="Miniatura 3" onclick="changeImage('mainImage2', this)">
                         <img loading="lazy" src="/img/talles-y-medidas.png" alt="Miniatura 4" onclick="changeImage('mainImage2', this)">
                     </div>
 
@@ -236,261 +127,38 @@
                 <p class="sidebar__info">Producto exclusivo: Hola Mundo Store</p>
             </div>
 
-            <div class="sidebar_contenido">
-                <h3>Medios de pago</h3>
-                <p>Todas tus compras con tu cuenta de MercadoPago</p>
-                <img loading="lazy" src="/img/mercadopago.svg" alt="logo mercadopago" class="mercadopago">
-                <p>Tarjetas de crédito</p>
-                <div class="sidebar__logos">
-                    <img loading="lazy" src="/img/visa.svg" alt="visa crédito">
-                    <img loading="lazy" src="/img/amex.svg" alt="american express">
-                    <img loading="lazy" src="/img/mastercard.svg" alt="martercard">
-                    <img loading="lazy" src="/img/naranja.svg" alt="tarjeta naranja">
-                </div>
-                <p>Tarjetas de débito</p>
-                <div class="sidebar__logos">
-                    <img loading="lazy" src="/img/visa-debito.svg" alt="visa débito">
-                    <img loading="lazy" src="/img/maestro.svg" alt="maestro">
-                    <img loading="lazy" src="/img/cabal-debito.svg" alt="cabal débito">
-                    <img loading="lazy" src="/img/maestro.svg" alt="maestro">
-                </div>
-                <p>Efectivo</p>
-                <div class="sidebar__logos">
-                    <img loading="lazy" src="/img/pagofacil.svg" alt="pagofácil">
-                    <img loading="lazy" src="/img/rapipago.svg" alt="rapipago">
-                </div>
-            </div>
-
-            <div class="sidebar_contenido">
-                <div class="lista__relacionados">
-
-                    <a href="/tienda/cuadros/monokaipro.html">
-                        <ul class="caracteristicas__lista no-space">
-                            <li class="lista">
-                                <div class="lista__miniatura">
-                                    <img loading="lazy" src="/img/monokai-pro.jpg"
-                                        alt="Cuadro Hello World - Monokai Pro" class="miniatura">
-                                </div>
-                                <div class="lista__info">
-                                    <h3 class="no-space precio" data-producto="cuadros">$0</h3>
-                                    <p class="bloque__envio no-space">Envío gratis</p>
-                                    <p class="no-space">Cuadro Hello World - Monokai Pro</p>
-                                </div>
-                            </li>
-                        </ul>
-                    </a>
-
-                    <a href="/tienda/cuadros/dracula.html">
-                        <ul class="caracteristicas__lista no-space">
-                            <li class="lista">
-                                <div class="lista__miniatura">
-                                    <img loading="lazy" src="/img/dracula.jpg" alt="Cuadro Hello World - Drácula"
-                                        class="miniatura">
-                                </div>
-                                <div class="lista__info">
-                                    <h3 class="no-space precio" data-producto="cuadros">$0</h3>
-                                    <p class="bloque__envio no-space">Envío gratis</p>
-                                    <p class="no-space">Cuadro Hello World - Drácula</p>
-                                </div>
-                            </li>
-                        </ul>
-                    </a>
-
-                    <a href="/tienda/cuadros/gruvbox.html">
-                        <ul class="caracteristicas__lista no-space">
-                            <li class="lista">
-                                <div class="lista__miniatura">
-                                    <img loading="lazy" src="/img/gruvbox.jpg"
-                                        alt="Cuadro Hello World - Gruvbox" class="miniatura">
-                                </div>
-                                <div class="lista__info">
-                                    <h3 class="no-space precio" data-producto="cuadros">$0</h3>
-                                    <p class="bloque__envio no-space">Envío gratis</p>
-                                    <p class="no-space">Cuadro Hello World - Gruvbox</p>
-                                </div>
-                            </li>
-                        </ul>
-                    </a>
-
-                    <a href="/tienda/cuadros/edicionespecial.html">
-                        <ul class="caracteristicas__lista no-space">
-                            <li class="lista">
-                                <div class="lista__miniatura">
-                                    <img loading="lazy" src="/img/somos-campeones.jpg"
-                                        alt="Cuadro Hello World - edición especial" class="miniatura">
-                                </div>
-                                <div class="lista__info">
-                                    <h3 class="no-space precio" data-producto="cuadros">$0</h3>
-                                    <p class="bloque__envio no-space">Envío gratis</p>
-                                    <p class="no-space">Cuadro Hello World - edición especial</p>
-                                </div>
-                            </li>
-                        </ul>
-                    </a>
-                    <a href="/tienda/cuadros/customtheme.html">
-                        <ul class="caracteristicas__lista no-space">
-                            <li class="lista">
-                                <div class="lista__miniatura">
-                                    <img loading="lazy" src="/img/custom.png" alt="cuadro hello world - personalizado"
-                                        class="miniatura">
-                                </div>
-                                <div class="lista__info">
-                                    <h3 class="no-space precio" data-producto="cuadrosCustom">$0</h3>
-                                    <p class="bloque__envio no-space">Envío gratis</p>
-                                    <p class="no-space">cuadro Hello World - Personalizado)</p>
-                                </div>
-                            </li>
-                        </ul>
-                    </a>
-                </div>
-            </div>
-
-            <div class="sidebar_contenido">
-                <h3>Si quieres una web o una tienda online visita Soy Marcus 👇</h3>
-                <a href="https://articulo.mercadolibre.com.ar/MLA-1234828425-cuadro-decorativo-30x40-chato-completo-sin-lamina-_JM?attributes=COLOR_SECONDARY_COLOR%3ATWFkZXJh%2CFRAME_COLOR%3ATmF0dXJhbA%3D%3D&quantity=1"
-                    target="_blank">
-                    <img loading="lazy" src="/img/banner-mercadolibre.png" alt="banner mercadolibre" class="banner-ml">
-                </a>
-            </div>
+                    <!-- Medios de pago -->
+                    <div id="pagos"></div>
+                    <!-- Fin sidebar de cuadros -->
+        
+                    <!-- Sidebar de cuadros -->
+                    <div id="sideCuadros"></div>
+                    <!-- Fin sidebar de cuadros -->
+        
+                    <!-- Sidebar de soymarcus -->
+                    <div id="soymarcus"></div>
+                    <!-- Fin sidebar de cuadros -->
 
 
         </aside>
     </main>
 
-    <div class="contenedor banner contenido-banner">
-        <div class="banner__imagen">
-            <a href="/tienda/cuadros/customtheme.html">
-                <img loading="lazy" src="/img/banner-personalizado.png" alt="banner cuadro personalizado" class="block">
-            </a>
-        </div>
-        <div class="banner__info">
-            <div class="banner__info__icono">
-                <img loading="lazy" src="/img/cuentagotas.png" alt="ícono personalizado" class="block">
-            </div>
-            <div class="banner__info__copy">
-                <h4 class="no-space b1">Personalizálo</h4>
-                <h2 class="no-space b2">Lo hacemos <br>
-                    con tu theme</h2>
-                <a href="/tienda/cuadros/customtheme.html">
-                    <p class="no-space b3">Más info
-                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-right"
-                            width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none"
-                            stroke-linecap="round" stroke-linejoin="round">
-                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                            <path d="M9 6l6 6l-6 6" />
-                        </svg>
-                    </p>
-                </a>
-            </div>
-        </div>
-    </div>
-
-    <section class="contenedor contenido" id="deskpads">
-
-        <h3 class="titulos">Tu lugar, tu setup</h3>
-        <div class="bloques">
-
-            <div class="bloque">
-                <a href="/tienda/deskpads/monokaipro.html">
-                    <img loading="lazy" src="/img/hw3.png" alt="deskpad hello world - monokai pro" class="bloque__imagen ">
-                    <div class="bloque__info">
-                        <h3 class="bloque__nombre no-space">DeskPad Hello World - Monokai Pro</h3>
-                        <p class="bloque__precio no-space precio" data-producto="deskpads">$0</p>
-                        <div class="bloque__detalle">
-                            <!--<p class="detalle">Marcos de distintos colores*</p>-->
-                            <p class="bloque__envio no-space">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-bolt"
-                                    width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#00a650"
-                                    fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                    <path d="M13 3l0 7l6 0l-8 11l0 -7l-6 0l8 -11" />
-                                </svg>
-                                <b>Envío gratis</b>
-                            </p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <div class="bloque">
-                <a href="/tienda/deskpads/dracula.html">
-                    <img loading="lazy" src="/img/hw4.png" alt="desk pad hello world - drácula theme" class="bloque__imagen ">
-                    <div class="bloque__info">
-                        <h3 class="bloque__nombre no-space">DeskPad Hello World - Drácula theme</h3>
-                        <p class="bloque__precio no-space precio" data-producto="deskpads">$0</p>
-                        <div class="bloque__detalle">
-                            <!--<p class="detalle">Marcos de distintos colores*</p>-->
-                            <p class="bloque__envio no-space">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-bolt"
-                                    width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#00a650"
-                                    fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                    <path d="M13 3l0 7l6 0l-8 11l0 -7l-6 0l8 -11" />
-                                </svg>
-                                <b>Envío gratis</b>
-                            </p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <div class="bloque">
-                <a href="/tienda/deskpads/gruvbox.html">
-                    <img loading="lazy" src="/img/hw2.png" alt="deskpad hello world - gruvbox theme" class="bloque__imagen ">
-                    <div class="bloque__info">
-                        <h3 class="bloque__nombre no-space">DeskPad Hello World - Gruvbox</h3>
-                        <p class="bloque__precio no-space precio" data-producto="deskpads">$0</p>
-                        <div class="bloque__detalle">
-                            <!--<p class="detalle">Marcos de distintos colores*</p>-->
-                            <p class="bloque__envio no-space">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-bolt"
-                                    width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#00a650"
-                                    fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                    <path d="M13 3l0 7l6 0l-8 11l0 -7l-6 0l8 -11" />
-                                </svg>
-                                <b>Envío gratis</b>
-                            </p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <div class="bloque">
-                <a href="/tienda/deskpads/customtheme.html">
-                    <img loading="lazy" src="/img/hw1.png" alt="deskpad hello world - personalizado" class="bloque__imagen ">
-                    <div class="bloque__info">
-                        <h3 class="bloque__nombre no-space">DeskPad Hello World - personalizado</h3>
-                        <p class="bloque__precio no-space precio" data-producto="deskpadsCustom">$0</p>
-                        <div class="bloque__detalle">
-                            <!--<p class="detalle">Marcos de distintos colores*</p>-->
-                            <p class="bloque__envio no-space">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-bolt"
-                                    width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#00a650"
-                                    fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                    <path d="M13 3l0 7l6 0l-8 11l0 -7l-6 0l8 -11" />
-                                </svg>
-                                <b>Envío gratis</b>
-                            </p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </div>
-
-    </section>
+    <div id="bannerCuadros"></div>
+    <div id="deskpads"></div>
 
     <footer></footer>
 
-    <div class="whatsapp">
-        <a href="https://wa.me/+5493515957014?text=Hola, quería consultar por ">
-            <img loading="lazy" src="/img/whatsapp.png" alt="whatsapp Hola Mundo Store">
-        </a>
-    </div>
-
+    <!-- // TEMPLATES // -->
     <script src="/templates/headeryfooter.js"></script>
-    
+    <script src="/templates/infoRemeras.js"></script>
+    <script src="/templates/relRemeras2.js"></script>
+    <script src="/templates/pagos.js"></script>
+    <script src="/templates/sideCuadros.js"></script>
+    <script src="/templates/soymarcus.js"></script>
+    <script src="/templates/bannerCuadros.js"></script>
+    <script src="/templates/deskpads.js"></script>
+
+    <!-- // SCRIPTS // -->
     <script src="/js/scripts.js"></script>
     <script src="/js/modernizr.js"></script>
 

@@ -24,18 +24,36 @@ function actualizarPrecios() {
 
 
 
-/* ==== ANIMACIÓN DE CARDS ==== */
-const cards = document.querySelectorAll('.card');
 
+
+/* ==== ANIMACIÓN DE CARDS ==== */
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.classList.add('show');
         }
     });
-}); 
+});
 
-cards.forEach(card => observer.observe(card)); 
+// Observar cards iniciales
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.card').forEach(card => observer.observe(card));
+});
+
+// Observar nuevas cards que se agreguen dinámicamente
+const mutationObserver = new MutationObserver(() => {
+    document.querySelectorAll('.card:not(.observado)').forEach(card => {
+        observer.observe(card);
+        card.classList.add('observado');
+    });
+});
+
+// Iniciar observación de cambios en el DOM
+mutationObserver.observe(document.body, {
+    childList: true,
+    subtree: true
+});
+
 
 
 /* ==== GALERÍA DE PRODUCTOS ==== */

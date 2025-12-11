@@ -223,6 +223,10 @@ textarea {
     display: block;
 }
 
+.border{
+    border-radius: .8rem 0 0 .8rem;
+}
+
 @media (min-width: 768px) {
     .flex {
         display: flex;
@@ -398,6 +402,7 @@ ul.menu li a {
     background-color: var(--blanco);
     border-radius: .8rem;
     margin-top: 2rem;
+    margin-bottom: 2rem;
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .12);
     padding: 1rem;
 }
@@ -450,6 +455,7 @@ ul.menu li a {
 
 .bloque__imagen {
     width: 100%;
+    border-radius: .8rem;
 }
 
 .bloque__info {
@@ -509,9 +515,6 @@ ul.menu li a {
     }
 }
 
-.banner__imagen-border {
-    border-radius: .8rem 0 0 .8rem;
-}
 
 .contenido-banner {
     background-color: var(--negro);
@@ -656,17 +659,20 @@ ul.menu li a {
     }
 }
 
+.iconos-pie {
+    background-color: var(--blanco);
+    margin-top: 4rem;
+}
+
 /* .banner-promo__imagen {
     border-radius: .4rem;
 }
-
  */
 
 /* Footer */
 .footer {
     background-color: var(--blanco);
-    margin-top: 4rem;
-    padding-top: 4rem;
+    margin: 0;
 }
 
 .icono__imagen {
@@ -885,6 +891,7 @@ button.next {
 .thumbnail-images-movil {
     display: flex;
     margin-top: 1rem;
+    column-gap: 2rem;
 }
 
 .thumbnail-images-movil img {
@@ -1008,7 +1015,7 @@ button.next {
 /* Descripción */
 .descripcion__copy {
     font-size: 1.6rem;
-    line-height: 1.6;
+    margin: 2rem 0
 }
 
 /* Galería móvil */
@@ -1051,7 +1058,7 @@ button.next {
 
 .heart-icon {
     font-size: 3rem;
-    color: var(--azul);
+    color: var(--primario);
     cursor: pointer;
     transition: color 0.3s ease;
 }
@@ -1084,7 +1091,7 @@ button.next {
 
 .star {
     font-size: 1.6rem;
-    color: var(--azul);
+    color: var(--primario);
     /* Azul */
     margin-right: .4rem;
     /* Espacio entre las estrellas */
@@ -1150,7 +1157,6 @@ button.next {
 .lista__relacionados {
     display: flex;
     flex-direction: column;
-    row-gap: 1rem;
 }
 
 .lista {
@@ -1159,7 +1165,7 @@ button.next {
     align-items: center;
     justify-content: center;
     column-gap: 2rem;
-    margin: 1rem 0;
+    margin: .6rem 0;
     color: var(--dark);
 }
 
@@ -1414,7 +1420,8 @@ button[type="submit"]:hover {
 }
 
 .categoria_grid {
-    margin-top: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 
 @media (min-width: 768px) {

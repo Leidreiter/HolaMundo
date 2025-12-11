@@ -67,30 +67,6 @@ const headerHTML = `
 // HTML del footer
 const footerHTML = `
     <footer class="footer">
-        <div class="iconos contenedor">
-            <div class="icono">
-                <img loading="lazy" src="/img/icono-pagos.png" alt="icono pagos en Hola Mundo Store" class="icono__imagen">
-                <h3>Muchas formas de pago</h3>
-                <p class="icono__copy">Trabajo con mercadopago, lo cuál se aceptan todos los medios de pagos
-                    de la villetera virtual número 1 de Argentina, para que compres con total confianza.
-                </p>
-            </div>
-            <div class="icono">
-                <img loading="lazy" src="/img/icono-envios.png" alt="icono envios en Hola Mundo Store" class="icono__imagen">
-                <h3>Envíos a toda Argentina</h3>
-                <p class="icono__copy">Envío a toda la Argentina de norte a sur, todos los pedidos salen
-                    desde Córdoba, Argentina y pueden variar dependiendo tu ubicación.
-                </p>
-            </div>
-            <div class="icono">
-                <img loading="lazy" src="/img/icono-stock.png" alt="icono stock en Hola Mundo Store" class="icono__imagen">
-                <h3>Stock siempre disponible</h3>
-                <p class="icono__copy">Toda la web opera bajo pedido, compra con total confianza, yo
-                    me counicaré contigo personalmente para asegurar que llegué lo que pidas.
-                </p>
-            </div>
-        </div>
-
         <div class="footer_lista">
             <div class="contenedor footer_lista_grid">
                 <div class="footer_listas">
@@ -130,95 +106,25 @@ const footerHTML = `
                 </div>
                 <div class="footer_listas">
                     <h5 class="footer_titulo">Hecha con ♥️ por:</h5>
-                    <a href="https://soymarcus.pages.dev" target="_blank"><img src="/img/designby.png" class="designby"></a>
+                    <a href="https://soymarcus.pages.dev" target="_blank"><img src="/img/soymarcusdev.svg" class="designby"></a>
                 </div>
             </div>
         </div>
 
     </footer>
 `;
-const remerasSidebarHTML = `
-    <div class="sidebar_contenido" id="remeras-sidebar">
-                <div class="lista__relacionados">
 
-                    <a href="/tienda/remeras/anticodingclub.html">
-                        <ul class="caracteristicas__lista no-space">
-                            <li class="lista">
-                                <div class="lista__miniatura">
-                                <picture>
-                                <source srcset="/img/anti-coding.webp" type="image/webp">
-                                <img loading="lazy" src="/img/anti-coding.jpg" alt="remera anti coding coding club - Hola Mundo Store" class="miniatura">
-                                </picture>
-                                </div>
-                                <div class="lista__info">
-                                    <h3 class="no-space precio" data-producto="remeras">$0</h3>
-                                    <p class="bloque__envio no-space">Envío gratis</p>
-                                    <p class="no-space">Anti Coding Coding CLub</p>
-                                </div>
-                            </li>
-                        </ul>
-                    </a>
-
-                    <a href="/tienda/remeras/thisisfine.html">
-                        <ul class="caracteristicas__lista no-space">
-                            <li class="lista">
-                                <div class="lista__miniatura">
-                                <picture>
-                                <source srcset="/img/this-is-fine.webp" type="image/webp">
-                                <img loading="lazy" src="/img/this-is-fine.jpg" alt="remera this is fine - Hola Mundo Store" class="miniatura">                                
-                                </picture>
-                                </div>
-                                <div class="lista__info">
-                                    <h3 class="no-space precio" data-producto="remeras">$0</h3>
-                                    <p class="bloque__envio no-space">Envío gratis</p>
-                                    <p class="no-space">This is fine</p>
-                                </div>
-                            </li>
-                        </ul>
-                    </a>
-
-                    <a href="/tienda/remeras/babydonthurtme.html">
-                        <ul class="caracteristicas__lista no-space">
-                            <li class="lista">
-                                <div class="lista__miniatura">
-                                <picture>
-                                <source srcset="/img/baby-dont-hurt-me.webp" type="image/webp">
-                                <img loading="lazy" src="/img/baby-dont-hurt-me.jpg" alt="remera baby dont hurt me - Hola Mundo Store" class="miniatura">                                
-                                </picture>
-                                </div>
-                                <div class="lista__info">
-                                    <h3 class="no-space precio" data-producto="remeras">$0</h3>
-                                    <p class="bloque__envio no-space">Envío gratis</p>
-                                    <p class="no-space">Baby dont hurt me</p>
-                                </div>
-                            </li>
-                        </ul>
-                    </a>
-                    
-                    <a href="/tienda/remeras/github.html">
-                        <ul class="caracteristicas__lista no-space">
-                            <li class="lista">
-                                <div class="lista__miniatura">
-                                <picture>
-                                <source srcset="/img/github.webp" type="image/webp">
-                                <img loading="lazy" src="/img/github.jpg" alt="remera github the octocat- Hola Mundo Store" class="miniatura">
-                                </picture>
-                                </div>
-                                <div class="lista__info">
-                                    <h3 class="no-space precio" data-producto="remeras">$0</h3>
-                                    <p class="bloque__envio no-space">Envío gratis</p>
-                                    <p class="no-space">Mona (Github)</p>
-                                </div>
-                            </li>
-                        </ul>
-                    </a>
-                </div>
-            </div>
+const whatsappHTML = `
+        <div class="whatsapp">
+        <a href="https://wa.me/+5493515957014?text=Hola, quería consultar por ">
+            <img loading="lazy" src="/img/whatsapp.png" alt="whatsapp Hola Mundo Store">
+        </a>
+    </div>
 `;
 
 // Función para inyectar el header y footer en el DOM
 function cargarTemplate() {
     document.querySelector("header").innerHTML = headerHTML;
     document.querySelector("footer").innerHTML = footerHTML;
-    document.querySelector("#remeras-sidebar").innerHTML = remerasSidebarHTML;
+    document.querySelector("#whatsapp").innerHTML = whatsappHTML;
 }
